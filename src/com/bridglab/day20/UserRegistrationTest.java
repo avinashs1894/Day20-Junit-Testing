@@ -1,6 +1,5 @@
 package com.bridglab.day20;
 
-
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -17,9 +16,20 @@ public class UserRegistrationTest {
 
     @Test
     public void givenFirstName_WhenOurOfFormat_ShouldReturnFlase() {
-        boolean result = userRegistration.firstName("avi@ash");
+        boolean result = userRegistration.firstName("avina$h");
         Assert.assertEquals(false, result);
     }
 
+    @Test
+    public void givenLastName_WhenInFormat_ShouldReturnTrue() {
+        boolean result = userRegistration.lastName("Sanka");
+        Assert.assertEquals(true, result);
+    }
 
+    @Test
+    public void givenLastName_WhenOurOfFormat_ShouldReturnFalse() {
+        boolean result = userRegistration.lastName("sanka");
+        Assert.assertEquals(false, result);
+
+    }
 }
