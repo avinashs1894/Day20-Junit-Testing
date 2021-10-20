@@ -93,16 +93,26 @@ public class UserRegistrationTest {
     	}
     	  @Test
   	    public void givenPasswordRule3_WhenInFormat_ShouldReturnTrue() {
-  	        boolean result = userRegistration.passwordRule3("Rajendra22");
+  	        boolean result = userRegistration.passwordRule3("Avinash2");
   	        Assert.assertEquals(true, result);
   	    }
 
   	    @Test
   	    public void givenPasswordRule3_WhenOurOfFormat_ShouldReturnFalse() {
-  	        boolean result = userRegistration.passwordRule3("Rajendra");
+  	        boolean result = userRegistration.passwordRule3("Avinash");
   	        Assert.assertEquals(false, result);
   	    }
 
+  	  @Test
+	    public void givenPasswordRule4_WhenInFormat_ShouldReturnTrue() {
+	        boolean result = userRegistration.passwordRule4("Avinash@22");
+	        Assert.assertEquals(true, result);
+	    }
 
+	    @Test
+	    public void givenPasswordRule4_WhenOurOfFormat_ShouldReturnFalse() {
+	        boolean result = userRegistration.passwordRule4("Avinash");
+	        Assert.assertEquals(false, result);
+	    }
 
 }
